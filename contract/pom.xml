@@ -8,6 +8,11 @@
 		<artifactId>owlapi-parent</artifactId>
 		<version>4.5.27-SNAPSHOT</version>
 	</parent>
+
+	<properties>
+		<maven-surefire-plugin.version>2.20</maven-surefire-plugin.version>
+	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
