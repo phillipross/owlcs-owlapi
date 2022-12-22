@@ -3,10 +3,6 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<prerequisites>
-		<maven>3.0.5</maven>
-	</prerequisites>
-
 	<parent>
 		<groupId>org.sonatype.oss</groupId>
 		<artifactId>oss-parent</artifactId>
@@ -31,6 +27,7 @@
 		<last.japicmp.compare.version>4.0.0</last.japicmp.compare.version>
 
 		<japicmp-maven-plugin.version>0.12.0</japicmp-maven-plugin.version>
+		<maven.min.version>3.0.5</maven.min.version>
 	</properties>
 
 
@@ -362,6 +359,19 @@
 								</enforceBytecodeVersion>
 							</rules>
 							<fail>false</fail>
+						</configuration>
+					</execution>
+					<execution>
+						<id>enforce-maven</id>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<requireMavenVersion>
+									<version>[${maven.min.version},)</version>
+								</requireMavenVersion>
+							</rules>
 						</configuration>
 					</execution>
 				</executions>
