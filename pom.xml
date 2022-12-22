@@ -29,6 +29,8 @@
 		<no-javadoc>false</no-javadoc>
 		<!-- 4.0.0 is the earliest release on Maven Central for this series -->
 		<last.japicmp.compare.version>4.0.0</last.japicmp.compare.version>
+
+		<japicmp-maven-plugin.version>0.12.0</japicmp-maven-plugin.version>
 	</properties>
 
 
@@ -417,10 +419,10 @@
 						</execution>
 					</executions>
 				</plugin>
-				<!-- <plugin>
+				 <plugin>
 					<groupId>com.github.siom79.japicmp</groupId>
 					<artifactId>japicmp-maven-plugin</artifactId>
-					<version>0.18.3</version>
+					<version>${japicmp-maven-plugin.version}</version>
 					<configuration>
 						<oldVersion>
 							<dependency>
@@ -443,15 +445,15 @@
 					</ignoreMissingClassesByRegularExpressions>
 						</parameter>
 					</configuration>
-					<executions>
+					<!--<executions>
 						<execution>
 							<phase>verify</phase>
 							<goals>
 								<goal>cmp</goal>
 							</goals>
 						</execution>
-					</executions>
-				</plugin> -->
+					</executions>-->
+				</plugin>
 			</plugins>
 		</pluginManagement>
 	</build>
