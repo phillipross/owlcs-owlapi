@@ -258,11 +258,11 @@
 				</executions>
 			</plugin>
 			<plugin>
-				<!-- verify all bytecode (including third party libs) is Java 8 max 
+				<!-- verify all bytecode (including third party libs) is Java 8 max
 				     due to its reliance on Caffeine which is only available for Java 8 -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
-				<version>3.4.1</version>
+				<version>${maven-enforcer-plugin.version}</version>
 				<executions>
 					<execution>
 						<id>enforce-bytecode-version</id>
@@ -272,7 +272,7 @@
 						<configuration>
 							<rules>
 								<enforceBytecodeVersion>
-									<maxJdkVersion>1.8</maxJdkVersion>
+									<maxJdkVersion>${java.max.version}</maxJdkVersion>
 								</enforceBytecodeVersion>
 							</rules>
 							<fail>false</fail>
@@ -283,7 +283,7 @@
 					<dependency>
 						<groupId>org.codehaus.mojo</groupId>
 						<artifactId>extra-enforcer-rules</artifactId>
-						<version>1.7.0</version>
+						<version>${extra-enforcer-rules.version}</version>
 					</dependency>
 				</dependencies>
 			</plugin>
