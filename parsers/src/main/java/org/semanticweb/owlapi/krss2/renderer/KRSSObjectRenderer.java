@@ -95,7 +95,7 @@ import org.semanticweb.owlapi.util.OWLObjectVisitorAdapter;
  * A {@code KRSSObjectRenderer} renders an OWLOntology in the original KRSS syntax. Note that only a
  * subset of OWL can be expressed in KRSS. <br>
  * <b>Abbreviations</b>
- * <table summary="abbreviations">
+ * <table><caption>abbreviations</caption>
  * <tr>
  * <td>CN</td>
  * <td>concept name</td>
@@ -115,7 +115,7 @@ import org.semanticweb.owlapi.util.OWLObjectVisitorAdapter;
  * </table>
  * <br>
  * <b>KRSS concept language</b>
- * <table summary="krss concept language">
+ * <table><caption>krss concept language</caption>
  * <tr>
  * <td>KRSS</td>
  * <td>OWLClassExpression</td>
@@ -155,7 +155,7 @@ import org.semanticweb.owlapi.util.OWLObjectVisitorAdapter;
  * </table>
  * <br>
  * <b>KRSS role language</b>
- * <table summary="krss role language">
+ * <table><caption>krss role language</caption>
  * <tr>
  * <td>KRSS</td>
  * <td>OWLObjectPropertyExpression</td>
@@ -169,7 +169,7 @@ import org.semanticweb.owlapi.util.OWLObjectVisitorAdapter;
  * Each referenced class, object property as well as individual is defined using
  * <i>define-concept</i> resp. <i>define-primitive-concept</i>, <i>define-role</i> and
  * <i>define-individual</i>. In addition, axioms are translated as follows. <br>
- * <table summary="remarks">
+ * <table><caption>remarks</caption>
  * <tr>
  * <td>OWLAxiom</td>
  * <td>KRSS syntax</td>
