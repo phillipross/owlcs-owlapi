@@ -46,7 +46,7 @@ import org.xml.sax.helpers.DefaultHandler;
  * or elements that contain both sub-element and character data; character data is only supported in
  * the "leaves" of the XML element tree.
  *
- * <h3>Example:</h3>
+ * <strong>Example:</strong>
  * <p>
  * Parsing the following XML:
  * 
@@ -58,7 +58,7 @@ import org.xml.sax.helpers.DefaultHandler;
  * &lt;/xml-doc&gt;
  * </pre>
  * <p>
- * will result in the following method calls to the <tt>SimpleSAXListener</tt>:
+ * will result in the following method calls to the {@code SimpleSAXListener}:
  * 
  * <pre>
  * startDocument()
@@ -100,9 +100,9 @@ public class OWLAPISimpleSAXParser {
      *--------------*/
 
     /**
-     * Creates a new OWLAPISimpleSAXParser that will use the supplied <tt>XMLReader</tt> for parsing
-     * the XML. One must set a <tt>SimpleSAXListener</tt> on this object before calling one of the
-     * <tt>parse()</tt> methods.
+     * Creates a new OWLAPISimpleSAXParser that will use the supplied {@code XMLReader} for parsing
+     * the XML. One must set a {@code SimpleSAXListener} on this object before calling one of the
+     * {@code parse()} methods.
      * 
      * @param xmlReader The XMLReader to use for parsing.
      * 
@@ -114,9 +114,9 @@ public class OWLAPISimpleSAXParser {
     }
 
     /**
-     * Creates a new OWLAPISimpleSAXParser that will try to create a new <tt>XMLReader</tt> using
-     * <tt>info.aduna.xml.XMLReaderFactory</tt> for parsing the XML. One must set a
-     * <tt>SimpleSAXListener</tt> on this object before calling one of the <tt>parse()</tt> methods.
+     * Creates a new OWLAPISimpleSAXParser that will try to create a new {@code XMLReader} using
+     * {@code info.aduna.xml.XMLReaderFactory} for parsing the XML. One must set a
+     * {@code SimpleSAXListener} on this object before calling one of the {@code parse()} methods.
      * 
      * @throws SAXException If the OWLAPISimpleSAXParser was unable to create an XMLReader.
      * 
@@ -163,14 +163,14 @@ public class OWLAPISimpleSAXParser {
 
     /**
      * @return Checks whether leading and trailing whitespace characters in text elements are
-     *         preserved. Defaults to <tt>false</tt>.
+     *         preserved. Defaults to {@code false}.
      */
     public boolean isPreserveWhitespace() {
         return preserveWhitespace;
     }
 
     /**
-     * Parses the content of the supplied <tt>File</tt> as XML.
+     * Parses the content of the supplied {@code File} as XML.
      * 
      * @param file The file containing the XML to parse.
      * @throws SAXException parse exception
@@ -183,9 +183,9 @@ public class OWLAPISimpleSAXParser {
     }
 
     /**
-     * Parses the content of the supplied <tt>InputStream</tt> as XML.
+     * Parses the content of the supplied {@code InputStream} as XML.
      * 
-     * @param in An <tt>InputStream</tt> containing XML data.
+     * @param in An {@code InputStream} containing XML data.
      * @throws SAXException parse exception
      * @throws IOException if there was a problem writing to the output stream
      */
@@ -194,9 +194,9 @@ public class OWLAPISimpleSAXParser {
     }
 
     /**
-     * Parses the content of the supplied <tt>Reader</tt> as XML.
+     * Parses the content of the supplied {@code Reader} as XML.
      * 
-     * @param reader A <tt>Reader</tt> containing XML data.
+     * @param reader A {@code Reader} containing XML data.
      * @throws SAXException parse exception
      * @throws IOException if there was a problem writing to the output stream
      */
@@ -205,9 +205,9 @@ public class OWLAPISimpleSAXParser {
     }
 
     /**
-     * Parses the content of the supplied <tt>InputSource</tt> as XML.
+     * Parses the content of the supplied {@code InputSource} as XML.
      * 
-     * @param inputSource An <tt>InputSource</tt> containing XML data.
+     * @param inputSource An {@code InputSource} containing XML data.
      * @throws SAXException parse exception
      * @throws IOException if there was a problem writing to the output stream
      */
