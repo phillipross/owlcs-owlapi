@@ -4,10 +4,10 @@
 # NOTE: The just recipes defined below assume sdkman is installed and used for java and maven selection.
 #       Recipes that utilize docker containers assume the existence of the specific docker image existing locally
 
-export JAVA_VER_DISTRO_8 := "8.0.362-zulu"
-export JAVA_VER_DISTRO_11 := "11.0.18-zulu"
-export JAVA_VER_DISTRO_17 := "17.0.6-zulu"
-export JAVA_VER_DISTRO_20 := "20-zulu"
+export JAVA_VER_DISTRO_8 := "8.0.372-zulu"
+export JAVA_VER_DISTRO_11 := "11.0.19-zulu"
+export JAVA_VER_DISTRO_17 := "17.0.7-zulu"
+export JAVA_VER_DISTRO_20 := "20.0.1-zulu"
 
 default:
   @echo "Invoke just --list to see a list of possible recipes to run"
