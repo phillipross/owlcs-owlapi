@@ -4,9 +4,9 @@
 # NOTE: The just recipes defined below assume sdkman is installed and used for java and maven selection.
 #       Recipes that utilize docker containers assume the existence of the specific docker image existing locally
 
-export JAVA_VER_DISTRO_11 := "11.0.19-zulu"
-export JAVA_VER_DISTRO_17 := "17.0.7-zulu"
-export JAVA_VER_DISTRO_20 := "20.0.1-zulu"
+export JAVA_VER_DISTRO_11 := "11.0.21-zulu"
+export JAVA_VER_DISTRO_17 := "17.0.9-zulu"
+export JAVA_VER_DISTRO_21 := "21.0.1-zulu"
 
 default:
   @echo "Invoke just --list to see a list of possible recipes to run"
@@ -24,9 +24,9 @@ clean-17:
   sdk use java ${JAVA_VER_DISTRO_17}
   mvn clean
 
-clean-20:
+clean-21:
   #!/usr/bin/env bash -l
-  sdk use java ${JAVA_VER_DISTRO_20}
+  sdk use java ${JAVA_VER_DISTRO_21}
   mvn clean
 
 clean-install: clean-install-17
@@ -42,9 +42,9 @@ clean-install-17: clean-17
   sdk use java ${JAVA_VER_DISTRO_17}
   mvn install
 
-clean-install-20: clean-20
+clean-install-21: clean-21
   #!/usr/bin/env bash -l
-  sdk use java ${JAVA_VER_DISTRO_20}
+  sdk use java ${JAVA_VER_DISTRO_21}
   mvn install
 
 verify: verify-17
@@ -60,9 +60,9 @@ verify-17:
   sdk use java ${JAVA_VER_DISTRO_17}
   mvn verify
 
-verify-20:
+verify-21:
   #!/usr/bin/env bash -l
-  sdk use java ${JAVA_VER_DISTRO_20}
+  sdk use java ${JAVA_VER_DISTRO_21}
   mvn verify
 
 dependencies:
