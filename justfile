@@ -4,10 +4,11 @@
 # NOTE: The just recipes defined below assume sdkman is installed and used for java and maven selection.
 #       Recipes that utilize docker containers assume the existence of the specific docker image existing locally
 
-export JAVA_VER_DISTRO_8 := "8.0.452-zulu"
-export JAVA_VER_DISTRO_11 := "11.0.27-zulu"
-export JAVA_VER_DISTRO_17 := "17.0.15-zulu"
-export JAVA_VER_DISTRO_21 := "21.0.7-zulu"
+export JAVA_VER_DISTRO_8 := "8.0.472-zulu"
+export JAVA_VER_DISTRO_11 := "11.0.29-zulu"
+export JAVA_VER_DISTRO_17 := "17.0.17-zulu"
+export JAVA_VER_DISTRO_21 := "21.0.9-zulu"
+export JAVA_VER_DISTRO_25 := "25.0.1-zulu"
 
 default:
   @echo "Invoke just --list to see a list of possible recipes to run"
@@ -34,6 +35,11 @@ clean-21:
   sdk use java ${JAVA_VER_DISTRO_21}
   mvn clean
 
+clean-25:
+  #!/usr/bin/env bash -l
+  sdk use java ${JAVA_VER_DISTRO_25}
+  mvn clean
+
 clean-install: clean-install-8
 
 clean-install-8: clean-8
@@ -56,6 +62,11 @@ clean-install-21: clean-21
   sdk use java ${JAVA_VER_DISTRO_21}
   mvn install
 
+clean-install-25: clean-25
+  #!/usr/bin/env bash -l
+  sdk use java ${JAVA_VER_DISTRO_25}
+  mvn install
+
 verify: verify-8
 
 verify-8:
@@ -76,6 +87,11 @@ verify-17:
 verify-21:
   #!/usr/bin/env bash -l
   sdk use java ${JAVA_VER_DISTRO_21}
+  mvn -pl !:owlapi-osgidistribution verify
+
+verify-25:
+  #!/usr/bin/env bash -l
+  sdk use java ${JAVA_VER_DISTRO_25}
   mvn -pl !:owlapi-osgidistribution verify
 
 dependencies:
